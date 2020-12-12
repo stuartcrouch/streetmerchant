@@ -333,6 +333,7 @@ const store = {
 	country: envOrString(process.env.COUNTRY, 'usa'),
 	maxPrice: {
 		series: {
+			3060: envOrNumber(process.env.MAX_PRICE_SERIES_3060TI),
 			'3060ti': envOrNumber(process.env.MAX_PRICE_SERIES_3060TI),
 			3070: envOrNumber(process.env.MAX_PRICE_SERIES_3070),
 			3080: envOrNumber(process.env.MAX_PRICE_SERIES_3080),
@@ -363,6 +364,7 @@ const store = {
 		};
 	}),
 	showOnlySeries: envOrArray(process.env.SHOW_ONLY_SERIES, [
+		'3060'/*
 		'3060ti',
 		'3070',
 		'3080',
@@ -377,9 +379,10 @@ const store = {
 		'sonyps5c',
 		'sonyps5de',
 		'xboxss',
-		'xboxsx'
+		'xboxsx'*/
 	]),
-	stores: envOrArray(process.env.STORES, ['nvidia']).map((entry) => {
+	// 'nvidia','amazon-uk', 'scan', 'box', 'ccl', 'overclockers', 'ebuyer'
+	stores: envOrArray(process.env.STORES, ['amazon-uk', 'scan', 'box', 'overclockers', 'ebuyer', 'currys']).map((entry) => {
 		const [name, minPageSleep, maxPageSleep] = entry.match(/[^:]+/g) ?? [];
 
 		let proxyList;

@@ -127,7 +127,7 @@ export const AmazonUk: Store = {
 				]
 			},
 			{
-				series: '3060ti',
+				series: '3060',
 				url:
 					'https://www.amazon.co.uk/s?k=%2B%22RTX+3060+TI%22+-2060+-2070+-2080+-SUPER+-GTX&i=computers&rh=n%3A430500031%2Cp_n_availability%3A419162031&s=relevancerank&dc&qid=1601675291sb_noss'
 			}
