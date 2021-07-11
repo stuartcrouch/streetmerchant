@@ -28,7 +28,7 @@ export function sendDiscordMessage(link: Link, store: Store) {
 				const embed = new Discord.MessageEmbed()
 					.setTitle('_**Stock alert!**_')
 					.setDescription(
-						'> provided by [streetmerchant](https://github.com/jef/streetmerchant) with :heart:'
+						'@everyone > provided by [streetmerchant](https://github.com/jef/streetmerchant) with :heart:'
 					)
 					.setThumbnail(
 						'https://raw.githubusercontent.com/jef/streetmerchant/main/docs/assets/images/streetmerchant-square.png'
